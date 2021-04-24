@@ -41,14 +41,14 @@ Function GetProgramInfoW(const FileNameOrFullPathW: WideString; out ProcessID: D
 Function GetModuleInfoA(const ModuleNameOrFullPathA: PAnsiChar; out IsLoaded: DWORD): PAnsiChar;<br>
 Function GetModuleInfoW(const ModuleNameOrFullPathW: WideString; out IsLoaded: DWORD): WideString;<br>
 <br>
-Functions ExecDos* works in two ways. Namely, if you specify last parameter "Wait: Boolean" to true it waits for the program, and when it ends returns it's exit code.<br>
+Functions ExecDos\* works in two ways. Namely, if you specify last parameter "Wait: Boolean" to true it waits for the program, and when it ends returns it's exit code.<br>
 But, if you specify last parameter "Wait: Boolean" to false, it returns program ID, so you can do what you want in the script and check if the process still exists by function IsProcessExists.<br>
 <br>
-<b>Note</b>: you can use functions DosWriteInput* only if you specify callback function in parameter "ExecOutCallBack*: TExecOutCallBack*", other way it do nothing and always returns false.<br>
+<b>Note</b>: you can use functions DosWriteInput\* only if you specify callback function in parameter "ExecOutCallBack\*: TExecOutCallBack\*", other way it do nothing and always returns false.<br>
 <br>
 Function ExecDosA2W was created to execute programs from InnoSetup [Run] section for Unicode scripts, because InnoSetup prototype function must use parameters as a String. It converts ANSI characters to Unicode and calls ExecDosW function.<br>
 <br>
-Functions: GetProgramInfoA, GetProgramInfoW, GetModuleInfoA and GetModuleInfoW returns location of the program/module. GetProgramInfo* returns process ID in ProcessID variable, but GetModuleInfo* returns 0/1 in variable IsLoaded.<br>
+Functions: GetProgramInfoA, GetProgramInfoW, GetModuleInfoA and GetModuleInfoW returns location of the program/module. GetProgramInfo\* returns process ID in ProcessID variable, but GetModuleInfo\* returns 0/1 in variable IsLoaded.<br>
 <br>
 <br>
 <b>Bonus functions:</b><br>
@@ -77,12 +77,12 @@ Function DestroyConsole(): Bool;<br>
 <br>
 <b>Note 3</b>: if console still exists, you must use flag "ShellExec" in [Run] section for other console programs, without this flag executed console programs will be redirected to the console you created, and your installer will hangs out.<br>
 <br>
-Console and Text colors are written in the *.isi (InnoSetup include) files as "BackColorName" for first parameter, in "TextColorName" for second parameter.<br>
+Console and Text colors are written in the \*.isi (InnoSetup include) files as "BackColorName" for first parameter, in "TextColorName" for second parameter.<br>
 Please don't mix the BackColor and TextColor between parameters, because they are differ.<br>
 If you don't need to change one of the colors, you can use OldColor constant ($FF) as a parameter, it will use last used color.<br>
 <br>
 <br>
-I also created InnoSetup include (*.isi) files with all functions described to use, separatelly for ANSI/Unicode (ExecDosAndCheckRunning.isi) for choose manually. But ANSI/Unicode with auto-detection (ExecDosAndCheckRunningA-Wauto.isi), these functions without A or W as last letter.<br>
+I also created InnoSetup include (\*.isi) files with all functions described to use, separatelly for ANSI/Unicode (ExecDosAndCheckRunning.isi) for choose manually. But ANSI/Unicode with auto-detection (ExecDosAndCheckRunningA-Wauto.isi), these functions without A or W as last letter.<br>
 <br>
 So, you just need to include the file in you script by '#Include "ExecDosAndCheckRunning.isi"' (without single quote characters) at the beginning of the script for manually use the ANSI/Unicode (A/W) functions, or use the '#Include "ExecDosAndCheckRunningA-Wauto.isi"' file with ANSI/Unicode auto-detection (these functions without A or W as last letter).<br>
 <br>
