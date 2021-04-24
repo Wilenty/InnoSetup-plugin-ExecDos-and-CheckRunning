@@ -52,7 +52,6 @@ Functions: GetProgramInfoA, GetProgramInfoW, GetModuleInfoA and GetModuleInfoW r
 <br>
 <br>
 <b>Bonus functions:</b><br>
-<br>
 Function CreateConsole(): Bool;<br>
 <br>
 Function SetConsoleTitleA(const TitleA: PAnsiChar): Bool;<br>
