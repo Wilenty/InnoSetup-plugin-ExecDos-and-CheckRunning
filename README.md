@@ -77,7 +77,7 @@ Function DestroyConsole(): Bool;<br>
 <br>
 <b>Note 3</b>: if console still exists, you must use flag "ShellExec" in [Run] section for other console programs, without this flag executed console programs will be redirected to the console you created, and your installer will hangs out.<br>
 <br>
-Console and Text colors are written in the \*.isi (InnoSetup include) files as "BackColorName" for first parameter, in "TextColorName" for second parameter.<br>
+Console and Text colors are written in the \*.isi (InnoSetup include) files as "BackColorName" for first parameter, and "TextColorName" for second parameter.<br>
 Please don't mix the BackColor and TextColor between parameters, because they are differ.<br>
 If you don't need to change one of the colors, you can use OldColor constant ($FF) as a parameter, it will use last used color.<br>
 <br>
