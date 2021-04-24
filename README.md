@@ -42,7 +42,7 @@ Function GetModuleInfoA(const ModuleNameOrFullPathA: PAnsiChar; out IsLoaded: DW
 Function GetModuleInfoW(const ModuleNameOrFullPathW: WideString; out IsLoaded: DWORD): WideString;<br>
 <br>
 Functions ExecDos\* works in two ways. Namely, if you specify last parameter "Wait: Boolean" to true it waits for the program, and when it ends returns it's exit code.<br>
-But, if you specify last parameter "Wait: Boolean" to false, it returns program ID, so you can do what you want in the script and check if the process still exists by function IsProcessExists.<br>
+But, if you specify last parameter "Wait: Boolean" to false, it returns program ID, so you can do what you want in the script and check if the process still exists by function IsProcessExists. Or, you can wait for the program exit code by function Wait4ProcessExitCode, if you needs it.<br>
 <br>
 <b>Note</b>: you can use functions DosWriteInput\* only if you specify callback function in parameter "ExecOutCallBack\*: TExecOutCallBack\*", other way it do nothing and always returns false.<br>
 <br>
