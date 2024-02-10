@@ -1,3 +1,9 @@
+# InnoSetup plugin ExecDos and CheckRunning
+
+[![Latest Version](https://img.shields.io/github/release/Wilenty/InnoSetup-plugin-ExecDos-and-CheckRunning.svg)](https://github.com/Wilenty/InnoSetup-plugin-ExecDos-and-CheckRunning/releases/latest)
+[![Total Downloads](https://img.shields.io/github/downloads/Wilenty/InnoSetup-plugin-ExecDos-and-CheckRunning/total.svg)](https://github.com/Wilenty/InnoSetup-plugin-ExecDos-and-CheckRunning/releases)
+[![Latest Release Downloads](https://img.shields.io/github/downloads/Wilenty/InnoSetup-plugin-ExecDos-and-CheckRunning/latest/total.svg)](https://github.com/Wilenty/InnoSetup-plugin-ExecDos-and-CheckRunning/releases/latest)
+
 <b>Short info about my plugin:</b><br>
 This plugin (DLL) was created for InnoSetup which can execute console program, and returns his output in real time to the CallBack function.<br>
 Also, my plugin can check for running processes and/or loaded modules like a DLL and other dynamically loaded libraries.<br>
